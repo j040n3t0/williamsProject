@@ -1,0 +1,46 @@
+<html>
+<head>
+<style>
+.button {
+  background-color: #ff0000; /* Green */
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button1 {border-radius: 8px;}
+</style>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type=text/javascript>
+        $(function() {
+          $('a#test').bind('click', function() {
+            $.getJSON('/background_process_test',
+                function(data) {
+              //do nothing
+            });
+            return false;
+          });
+        });
+</script>
+</head>
+
+<body>
+</head>
+<body>
+<h1> William's Project!! </h1>
+<br />
+<div class='container'>
+<form>
+<a href=# id=test><button class="button button1"'>Vaaii Rubinho!! Vaiii...Vaiiii...</button></a>
+</form>
+</div>
+<br />
+<img src="/images/barrichello.png" width="300" height="200">
+</body>
+</html>
