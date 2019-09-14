@@ -8,8 +8,7 @@ app = Flask(__name__,static_url_path = "", static_folder = ".")
 
 def playsong():
    mixer.init()
-   mixer.music.load('/home/j040n3t0/Documentos/python-learn/williamProject/f1.mp3')
-   mixer.music.load('/home/j040n3t0/Documentos/python-learn/williamProject/f1.mp3')
+   mixer.music.load('f1.mp3')
    mixer.music.play()
    time.sleep(15)
    mixer.music.stop()
@@ -21,11 +20,13 @@ def index_default():
 #//rendering the HTML page which has the button
 @app.route('/json')
 def json():
+    print("JSON")
     return render_template('json.html')
 
 #//background process happening without any refreshing
 @app.route('/background_process_test')
 def background_process_test():
+    print("BACKGROUND")
     playsong()
     return "nothing"
 
